@@ -35,8 +35,8 @@ buttonCreate.addEventListener("click",
             document.getElementById('offerta').innerHTML = 'Biglietto silver';
         }
         else{
-            finalPrice = totalPrice
-            console.log (finalPrice);
+            finalPrice = totalPrice.toFixed(2);
+            console.log(finalPrice);
             document.getElementById('offerta').innerHTML = 'Biglietto standard'; 
         }
 
