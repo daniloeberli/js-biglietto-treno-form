@@ -27,14 +27,27 @@ buttonCreate.addEventListener("click",
         if (Number(userAge) < 18){
             finalPrice = (totalPrice- rateUnder18 * totalPrice).toFixed(2);
             console.log(finalPrice);
+            document.getElementById('offerta').innerHTML = 'Biglietto minorenne';
         }
         else if (Number(userAge) > 65){
             finalPrice = (totalPrice- rateOver65 * totalPrice).toFixed(2); 
             console.log(finalPrice);
+            document.getElementById('offerta').innerHTML = 'Biglietto silver';
         }
         else{
-            console.log (totalPrice); 
+            finalPrice = totalPrice
+            console.log (finalPrice);
+            document.getElementById('offerta').innerHTML = 'Biglietto standard'; 
         }
+
+        document.getElementById('ticket-show-h1').style.display = "block";
+        document.getElementById('ticket-show').style.display = "block";
+
+        //Scriviamo il nome passagero nel documento html
+        document.getElementById('names').innerHTML = userNames;
+        document.getElementById('price').innerHTML = finalPrice +'euro';
+        document.getElementById('car').innerHTML = Math.floor(Math.random() * 10) + 1;
+        document.getElementById('cp-code').innerHTML = Math.floor(10000 + Math.random() * 90000);
     }
 )
 

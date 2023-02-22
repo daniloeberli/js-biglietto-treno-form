@@ -8,7 +8,38 @@ body{
     background-color: #b91547;
 }
 
+h1{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.p-30{
+    padding: 30px;
+}
+
+.d-none{
+    display: none;
+}
+
 .container{
     max-width: 70%;
     margin: 0 auto;
+    background-color: white;
+}
+
+.row{
+    display: flex;
+}
+
+.col{
+    width: calc(100% / 5);
+}
+
+.col-3{
+    width: calc(100% / 3);
+}
+
+label,input{
+    display:flex;
+    flex-direction:column;
 }

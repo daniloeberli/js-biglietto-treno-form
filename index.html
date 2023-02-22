@@ -11,21 +11,65 @@
     <h1>provaaaa</h1>
     <div class="container">
         <form action="/" method="get">
-            <label for="input-name">Inserisci nome cognome</label>
-            <input type="text" id="input-name">
 
-            <label for="input-age">Inserisci la tua età</label>
-            <input type="number" id="input-age">
-
-            <label for="input-km">Inserisci i km da percorrere</label>
-            <input type="number" id="input-km">
-
+            <div class="row">
+                <div class="col-3">
+                    <label for="input-name">Inserisci nome cognome</label>
+                    <input type="text" id="input-name">
+                </div>
+                <div class="col-3">
+                    <label for="input-age">Inserisci la tua età</label>
+                    <input type="number" id="input-age">
+                </div>
+                <div class="col-3">
+                    <label for="input-km">Inserisci i km da percorrere</label>
+                    <input type="number" id="input-km">
+                </div>
+            </div>
+            
             <button id="genera-bottone" type="button">genera</button>
             <button id="reset-bottone" type="reset">reset</button>
         <form>
     </div>
-    <div>
 
+    <h1 id="ticket-show-h1" class="d-none">il tuo biglietto</h1>
+
+    <div id="ticket-show" class="container p-30 d-none">
+        <div class="row">
+            <div class="col">
+                <div class="col-content">
+                    <h2>Nome passeggero</h2>
+                    <span id="names"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-content">
+                    <h2>Offerta</h2>
+                    <span id="offerta"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-content">
+                    <h2>Carrozza</h2>
+                    <span id="car"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-content">
+                    <h2>Codice CP</h2>
+                    <span id="cp-code"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-content">
+                    <h2>Costo biglietto</h2>
+                    <span id="price"></span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
     </div>
 
     <!--javascript-->
