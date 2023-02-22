@@ -51,4 +51,10 @@ buttonCreate.addEventListener("click",
     }
 )
 
+buttonReset.addEventListener("click",
+function(){
+    document.getElementById('ticket-show-h1').style.display = "none";
+    document.getElementById('ticket-show').style.display = "none";
+}
+)
 
