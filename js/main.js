@@ -23,13 +23,13 @@ buttonCreate.addEventListener("click",
         //userKm deve essere di tipo Number e vogliamo al massimo due cifre decimali
         totalPrice =  Number(userKm).toFixed(2) * priceKm;
 
-        //if statement che controlla se possiamo applicare sconti all'utente, userAge da string diventa number
-        if (Number(userAge) < 18){
+        //if statement che controlla se possiamo applicare sconti all'utente
+        if (userAge === 'meno di 18'){
             finalPrice = (totalPrice- rateUnder18 * totalPrice).toFixed(2);
             console.log(finalPrice);
             document.getElementById('offerta').innerHTML = 'Biglietto minorenne';
         }
-        else if (Number(userAge) > 65){
+        else if (userAge === '65+'){
             finalPrice = (totalPrice- rateOver65 * totalPrice).toFixed(2); 
             console.log(finalPrice);
             document.getElementById('offerta').innerHTML = 'Biglietto silver';
@@ -51,6 +51,7 @@ buttonCreate.addEventListener("click",
     }
 )
 
+// al click del bottone di reset, la sezione biglietto torna display none
 buttonReset.addEventListener("click",
 function(){
     document.getElementById('ticket-show-h1').style.display = "none";
